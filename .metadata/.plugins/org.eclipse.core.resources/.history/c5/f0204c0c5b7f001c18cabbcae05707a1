@@ -1,0 +1,8 @@
+package ej1Colecciones;
+
+public class Cliente {
+	private String name;
+	private double salary;
+	private 
+	
+}
