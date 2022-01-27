@@ -8,5 +8,4 @@ public interface IStore {
 	boolean isFull();
 	Float howMuch();
 	Integer howMany(DrinkType type);
-	
 }
