@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="model.IDrink"/>
+    <fullyQualifiedTypeName name="interfaces.IMainController"/>
+    <fullyQualifiedTypeName name="interfaces.IDrink"/>
+    <fullyQualifiedTypeName name="interfaces.IView"/>
+    <fullyQualifiedTypeName name="interfaces.IStore"/>
 </qualifiedTypeNameHistroy>

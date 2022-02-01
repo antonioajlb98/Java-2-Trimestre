@@ -1,0 +1,72 @@
+package controller;
+
+import interfaces.IDrink;
+import interfaces.IMainController;
+
+public class MainController implements IMainController {
+
+	@Override
+	public void run() {
+	
+	}
+	/**
+	 * Muestra el menu principal de acción.
+	 */
+	private void showMainMenu() {
+		
+	}
+	/**
+	 * Ejecuta una de las opciones disponibles del 
+	 * menu principal en fnción del valor de opcion
+	 * @param option valor leído por teclado después
+	 * del menu principal
+	 */
+	private void switchMain(int option) {
+		
+	}
+	/**
+	 * Ejecuta la accion de añadir una nueva bebida, para
+	 * tomar los datos hace uso de secundary controller
+	 * @param drink bebida nueva a insertar
+	 * @return devuelve false si no pudo ser insertada por no 
+	 * haber espacio o existir ya una bebida con el mismo nombre
+	 */
+	private boolean addDrin(IDrink drink) {
+		return false;
+	}
+	/**
+	 * Busca y devuelve la bebida dada por el nobre name 
+	 * @param name nombre de la bebida a buscar
+	 * @return devuelve la bebida o null en caso de no existir
+	 */
+	private IDrink searchDrink(String name) {
+		return null;
+		
+	}
+	/**
+	 * Busca, devuelve y elimina la bebida del almacen dada por el nombre name
+	 * @param name nombre de la bebida a extraer
+	 * @return la bebida o null en caso de no existir
+	 */
+	private IDrink getDrink(String name) {
+	return null;	
+	}
+	/**
+	 * Actualiza la bebida con los nuevos datos insertados
+	 * @param drink bebida a ser actualizada
+	 * @return devuelve false en caso de no haber podido
+	 * ser actualizada por no existir.
+	 */
+	private boolean upadateDrink(IDrink drink) {
+		return false;
+	}
+	/**
+	 * Devuelve la cantidad de dinero en bebidas 
+	 * que existe en el almacen
+	 * @return la cantidad de dinero en formato float.
+	 */
+	private float getHowMuch() {
+		return 0;
+	}
+
+}
