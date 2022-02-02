@@ -14,10 +14,10 @@ public class Cliente {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getnAccout() {
+	public String getnAccount() {
 		return nAccout;
 	}
-	public void setnAccout(String nAccout) {
+	public void setnAccount(String nAccout) {
 		this.nAccout = nAccout;
 	}
 	public double getSalary() {
@@ -52,7 +52,7 @@ public class Cliente {
 		Cliente other = (Cliente) obj;
 		return Objects.equals(nAccout, other.nAccout);
 	}
-	
+
 	
 	
 	

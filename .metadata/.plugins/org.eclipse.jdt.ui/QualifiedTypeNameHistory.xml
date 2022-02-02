@@ -5,4 +5,5 @@
     <fullyQualifiedTypeName name="interfaces.IDrink"/>
     <fullyQualifiedTypeName name="interfaces.IView"/>
     <fullyQualifiedTypeName name="interfaces.IStore"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
 </qualifiedTypeNameHistroy>

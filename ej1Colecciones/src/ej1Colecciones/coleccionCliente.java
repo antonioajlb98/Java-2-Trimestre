@@ -1,6 +1,7 @@
 package ej1Colecciones;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class coleccionCliente {
@@ -13,17 +14,26 @@ public class coleccionCliente {
 		Cliente c4 = new Cliente("Pepe","001",52000);
 
 		Set <Cliente> misClientes = new HashSet<Cliente>();
-		
+	
 		misClientes.add(c1);
 		misClientes.add(c2);
 		misClientes.add(c3);
 		misClientes.add(c4);
-		
+		/*
 		for(Cliente c:misClientes) {
 			System.out.println(c);
 		}
-		
-		
+		*/
+	
+		Iterator <Cliente> it = misClientes.iterator();
+		/*while(it.hasNext()) {
+			System.out.println(it.next());
+		}*/
+		while(it.hasNext()) {
+			Cliente c= it.next();
+			System.out.println(c.getnAccount());
+			System.out.println(c.getName());
+		}
 	}
 
 }
