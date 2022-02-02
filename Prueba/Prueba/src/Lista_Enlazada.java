@@ -41,53 +41,57 @@ public class Lista_Enlazada<T> {
 
 		}
 	}
+
 	public T getFirst() {
-		if(!this.isEmpty()) {
+		if (!this.isEmpty()) {
 			return this.getPrimero().getDato();
-		}else {
+		} else {
 			return null;
 		}
 	}
+
 	public int lenghtList() {
 		int cont = 0;
-		if(this.isEmpty()) {
+		if (this.isEmpty()) {
 			return 0;
-		}else {
+		} else {
 			Nodo<T> aux = this.getPrimero();
-			while(aux!=null) {
-				aux=aux.getSiguiente();
-				cont +=1;
-				
+			while (aux != null) {
+				aux = aux.getSiguiente();
+				cont += 1;
+
 			}
 		}
 		return cont;
 	}
+
 	public T getDato(int pos) {
-		int cont=0;
-		Nodo<T> aux=this.getPrimero();
-		if(this.isEmpty()) {
+		int cont = 0;
+		Nodo<T> aux = this.getPrimero();
+		if (this.isEmpty()) {
 			return null;
-		}else if(pos>this.lenghtList()) {
+		} else if (pos > this.lenghtList()) {
 			return null;
-		}else{
-			while(cont<pos) {
-				aux=aux.getSiguiente();
-				cont ++;
+		} else {
+			while (cont < pos) {
+				aux = aux.getSiguiente();
+				cont++;
 			}
 		}
 		return aux.getDato();
 	}
+
 	public Nodo<T> getNodo(int pos) {
-		int cont=0;
-		Nodo<T> aux=this.getPrimero();
-		if(this.isEmpty()) {
+		int cont = 0;
+		Nodo<T> aux = this.getPrimero();
+		if (this.isEmpty()) {
 			return null;
-		}else if(pos>this.lenghtList()) {
+		} else if (pos > this.lenghtList()) {
 			return null;
-		}else{
-			while(cont<pos) {
-				aux=aux.getSiguiente();
-				cont ++;
+		} else {
+			while (cont < pos) {
+				aux = aux.getSiguiente();
+				cont++;
 			}
 		}
 		return aux;
