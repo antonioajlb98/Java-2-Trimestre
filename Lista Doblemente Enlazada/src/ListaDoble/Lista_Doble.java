@@ -11,7 +11,12 @@ public class Lista_Doble <T>{
 
 	@Override
 	public String toString() {
-		return "Los datos de la lista son: \n"+ this.primero.getDato();
+		String resultado="";
+		while(this.primero!=null) {
+			resultado+=this.primero.getDato() + "\n";
+			this.primero=this.primero.siguiente;
+		}
+		return resultado;
 	}
 	/**
 	 * Insertar un nodo al final de la lista
@@ -25,11 +30,12 @@ public class Lista_Doble <T>{
 			 this.size++;
 		 }else {
 			 Nodo<T> aux = this.primero;
-			 while(this.primero.siguiente!=null) {
-				 this.primero.siguiente=nuevo;
-				 this.primero.anterior=aux;
+			 while(aux.siguiente!=null) {
+				 aux=aux.siguiente;
 				 this.size++;
 			 }
+			 aux.siguiente=nuevo;
+			 nuevo.anterior=aux;
 		 }
 		 return this.size;
 	 }
@@ -55,20 +61,24 @@ public class Lista_Doble <T>{
 		 if(this.primero==null) {
 			 return null;
 		 }else {
-			 Nodo<T> aux;
-			 while(this.primero.siguiente!=null) {
-				 aux = this.primero.siguiente;
-				 this.primero.siguiente=this.primero.anterior;
-				 return aux.getDato(); 
+			 Nodo<T> aux=this.primero;
+			 while(aux.siguiente!=null) {
+				 aux=aux.siguiente;
+				 this.size++;
 			 }
-			 return null;
+			 aux.anterior.siguiente=null;
+			 aux.anterior=null;
+			 return aux.getDato();
 		 }
 	 }
 	 public T shift() {
 		 if(this.primero==null) {
 			 return null;
 		 }else {
-			 return this.primero.getDato();
+			 Nodo<T> aux = this.primero;
+			 this.primero=this.primero.siguiente;
+			 this.primero.anterior=null;
+			 return aux.getDato();
 		 }
 	 }
 	 public int contains(T v) {
@@ -78,8 +88,8 @@ public class Lista_Doble <T>{
 		 }else if(this.primero.getDato().equals(v)){
 			 return cont++; 
 		 }else{
-			 while(this.primero.siguiente.getDato()!=v) {
-				 cont++; 
+			 while(!this.primero.siguiente.getDato().equals(v)) {
+				 cont++;
 			 }
 			 return cont;
 		 }

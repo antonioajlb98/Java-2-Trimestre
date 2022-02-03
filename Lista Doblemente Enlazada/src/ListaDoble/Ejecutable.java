@@ -5,13 +5,13 @@ public class Ejecutable {
 		Lista_Doble<String> lista = new Lista_Doble();
 		
 		
-		
-		lista.push("Hola");
-		lista.push("Adios");
-		lista.push("Buenas tardes");
-		int x=lista.push("Hola");
-		
-		System.out.println(x);
+		lista.push("Hola 1");
+		lista.push("Hola 2");
+		lista.push("Hola 3");
+		lista.push("Hola 4");
+		lista.push("Hola 5");
+		System.out.println(lista.contains("Hola 3"));
 		System.out.println(lista);
 	}
+	
 }
